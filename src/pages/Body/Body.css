@@ -1,0 +1,154 @@
+.body {
+  position: absolute;
+  left: var(--sidebar-collapse-width);
+  top: var(--header-height);
+  width: calc(100vw - var(--sidebar-collapse-width));
+  height: calc(100vh - var(--header-height));
+  background-color: var(--body-background-color);
+  color: #fff;
+  overflow-x: hidden;
+  overflow-y: scroll;
+}
+.grid_container {
+  display: grid;
+  gap: 20px;
+  grid-template-columns: 60% auto;
+  margin: 16px 0;
+}
+.first > div {
+  /* height: 30%; */
+}
+.total_numbers_container {
+  display: grid;
+  gap: 10px;
+  grid-template-columns: 25%;
+  grid-auto-flow: column;
+}
+.orderlist_table {
+  font-size: 14px;
+}
+.recent_orders {
+  background-color: var(--light-dark-bg);
+  padding: 22px 28px;
+  border-radius: 6px;
+}
+.recent_orders h3 {
+  margin: 0;
+  font-size: 24px;
+  margin-bottom: 12px;
+}
+.orderlist_table {
+  width: 100%;
+  border-spacing: 0;
+}
+.orderlist_table thead tr,
+.orderlist_table tbody tr {
+  border-bottom: 1px solid #e1e1e1;
+}
+.orderlist_table td,
+.orderlist_table th {
+  padding-left: 7px;
+  padding-right: 16px;
+  padding-top: 12px;
+  padding-bottom: 12px;
+  text-align: left;
+  border-bottom: 1px solid #e1e1e1;
+}
+.delivered,
+.cancelled {
+  padding: 3px 6px;
+  border-radius: 16px;
+  width: auto;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.delivered {
+  background-color: #1a4a43;
+  color: #1eb087;
+}
+.cancelled {
+  background-color: #613033;
+  color: #b06870;
+}
+
+
+/*************** Net Profit CSS Starts ********************/
+.net_profit {
+  background-color: var(--light-dark-bg);
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.profit_progress_bar {
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  aspect-ratio: 1;
+}
+.progress_bar {
+  position: absolute;
+  padding: 44px;
+  /* border: 10px solid red; */
+  border-radius: 50%;
+  background: conic-gradient(var(--hover-color) 328deg, #2b3166 0);
+}
+.progress_bar.inner {
+  z-index: 2;
+  background-color: #2b3166;
+}
+.progress_bar.outer {
+  z-index: 3;
+  background: none;
+}
+.progress_bar.progress_content {
+  z-index: 4;
+  background-color: #000;
+}
+/*************** Net Profit CSS Ends ********************/
+
+
+
+
+/*************** Feedback CSS Starts ********************/
+.customer_feedback {
+  background-color: var(--light-dark-bg);
+  border-radius: 6px;
+  padding: 22px 28px;
+}
+.customer_feedback h3 {
+  margin: 0;
+  margin-bottom: 12px;
+  font-size: 24px;
+}
+.feedback_container {
+  margin: 14px 0;
+  padding-bottom: 14px;
+  border-bottom: 1px solid #666666;
+}
+.yellow_star{
+  color: #fade28;
+}
+.feedback_user_profile {
+  display: flex;
+  align-items: center;
+  margin-bottom: 10px;
+}
+.feedback_user_profile h4 {
+  margin: 0;
+}
+.feedback_user_profile img {
+  width: 36px;
+    height: 36px;
+    border-radius: 50%;
+    margin-right: 16px;
+}
+.feedback_content {
+  margin: 0;
+  margin-top: 4px;
+  font-size: 14px;
+  color: var(--font-sm-color);
+}
+/*************** Feedback CSS Ends ********************/
