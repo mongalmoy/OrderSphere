@@ -1,23 +1,23 @@
 import "./TotalItem.css";
-import { BsBagPlusFill } from "react-icons/bs";
-import { VscTriangleUp } from "react-icons/vsc";
+import { VscTriangleDown, VscTriangleUp } from "react-icons/vsc";
 
-const TotalItem = () => {
+const TotalItem = ({ icon, color, bgColor, type, count, gain, percentage }) => {
   return (
     <div className="total_item">
       <div>
-        <div className="plus_bag_container">
-          <BsBagPlusFill />
+        <div
+          className="plus_bag_container"
+          style={{ backgroundColor: bgColor }}
+        >
+          {icon}
         </div>
-        <p>Total Orders</p>
+        <p className="grey_color_text">{type}</p>
       </div>
       <div className="total_item_footer">
-        <h5>70</h5>
-        <div>
-          <span>
-            <VscTriangleUp />
-          </span>
-          <span>3%</span>
+        <h5>{(count + "").padStart(2, "0")}</h5>
+        <div className={gain === "P" ? "green" : "red"}>
+          <span>{gain === "P" ? <VscTriangleUp /> : <VscTriangleDown />}</span>
+          <span>{percentage}%</span>
         </div>
       </div>
     </div>

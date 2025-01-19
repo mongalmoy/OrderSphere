@@ -28,19 +28,21 @@
   align-items: center;
   justify-content: space-between;
 }
-.total_item_footer > div {
-  color: #159976;
+.total_item_footer > div.green {
+  color: var(--font-green-color);
+}
+.total_item_footer > div.red {
+  color: var(--font-red-color);
 }
 .plus_bag_container {
   display: flex;
   align-items: center;
   justify-content: center;
-  width: 12%;
-  background: #808fd4;
+  width: 34px;
   padding: 8px;
   aspect-ratio: 1;
   border-radius: 6px;
 }
-.plus_bag_container svg {
+/* .plus_bag_container svg {
   color: #0f2cb1;
-}
+} */
